@@ -2176,12 +2176,12 @@ module.exports = function(environment) {
             renderEnv = {compress: false},
             returner,
             directionValue = direction.toCSS(renderEnv),
-			i, color, position, positionValue, alpha;
+            i, color, position, positionValue, alpha;
 
         function throwArgumentDescriptor() {
             throw { type: "Argument",
-					message: "svg-gradient expects direction, start_color [start_position], [color position,]...," +
-							" end_color [end_position] or direction, color list" };
+                    message: "svg-gradient expects direction, start_color [start_position], [color position,]...," +
+                            " end_color [end_position] or direction, color list" };
         }
 
         if (arguments.length == 2) {
