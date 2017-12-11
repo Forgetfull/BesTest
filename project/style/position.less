@@ -1,0 +1,134 @@
+    //variables
+    @black: #000000;
+    @white: #ffffff;
+    @grey_black: #292929;
+    @border: #3f3f3f;
+    @grey_late: #ebe4de;
+    @brown: #826550;
+    @border: #e5ddd5;
+    body {
+        background-color: coral;
+    }
+
+
+    .top_menu {
+        background-color: @black;
+        height: 72px;
+        display: flex;
+        align-items: center;
+        li:first-child {
+            margin-left: 0px;
+        }
+        li {
+            margin-left: 30px;
+
+            a {
+
+                text-decoration: none;
+                color: @white;
+                text-transform: uppercase;
+
+            }
+        }
+        .exet {
+            margin-left: 140px;
+        }
+        .exet::before {
+            margin-right: 19px;
+            content: "";
+            display: block;
+            float: left;
+            background-image: url("/img/login.png");
+            background-size: cover;
+            width: 16px;
+            height: 16px;
+        }
+        li:hover::after {
+            position: absolute;
+            margin-top: 27px;
+            display: block;
+            content: "";
+            height: 1px;
+            width: 42px;
+            background-color: red;
+        }
+    }
+
+    .inputs {
+        border: 1px solid;
+        color: @black;
+        font-family: "PT Sans - Narrow";
+        .small {
+
+            font-size: 24px;
+            padding: 33px 17px;
+        }
+        .middle {
+            padding: 22px 281px 22px 24px;
+        }
+        .big {
+            padding: 26px 670px 163px 24px;
+
+        }
+    }
+
+    .cont_beard {
+        margin: 0 auto;
+
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .curcle {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            border-radius: 51px;
+            width: 52px;
+            height: 52px;
+            border: 1px solid @grey_late;
+            input {
+                border-color: red;
+                width: 20px;
+                height: 20px;
+            }
+        }
+        p {
+            margin-top: 35px;
+        }
+        img {
+            margin-top: 35px;
+        }
+    }
+
+    .cont_chekbox {
+        display: flex;
+        align-items: center;
+        input[type=checkbox] {
+            width: 22px;
+            height: 16px;
+            ;
+        }
+        .label {
+            font-family: "PT Sans - Narrow";
+            font-size: 20px;
+            margin-left: 35px;
+        }
+    }
+
+    .smal_btn {
+        text-decoration: none;
+        color: @black;
+        padding: 18px 36px;
+        border: 1px solid @border;
+    }
+
+    .big_btn {
+        text-decoration: none;
+        color: @white;
+        background-color: @brown;
+        padding: 26px 389px;
+        border: 1px solid @border;
+    }
+
+    .big_btn {}
