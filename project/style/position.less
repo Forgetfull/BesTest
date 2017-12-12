@@ -1,134 +1,200 @@
     //variables
     @black: #000000;
-    @white: #ffffff;
+    @white: #f8f5f2;
     @grey_black: #292929;
     @border: #3f3f3f;
     @grey_late: #ebe4de;
     @brown: #826550;
-    @border: #e5ddd5;
-    body {
-        background-color: coral;
-    }
-
-
-    .top_menu {
-        background-color: @black;
-        height: 72px;
-        display: flex;
-        align-items: center;
-        li:first-child {
-            margin-left: 0px;
-        }
-        li {
-            margin-left: 30px;
-
-            a {
-
-                text-decoration: none;
-                color: @white;
-                text-transform: uppercase;
-
+    @border: #e5ddd5; //
+    
+    
+    
+        body {
+            flex-direction: column;
+            display: flex;
+            background-color: dimgray;
+    
+    //
+        header {
+            justify-content: space-between;
+            flex-direction: column;
+            display: flex;
+            margin: 0 auto;
+            width: 1200px;
+            height: 379px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url("../img/back.png");
+            .top_menu {
+                background-color: @black;
+                height: 72px;
+                display: flex;
+                align-items: center;
+                li:first-child {
+                    margin-left: 152px;
+                }
+                li {
+                    margin-left: 30px;
+                    a {
+    
+                        text-decoration: none;
+                        color: @white;
+                        text-transform: uppercase;
+                    }
+                }
+                .exet {
+                    margin-left: 140px;
+                }
+                .exet::before {
+                    margin-right: 19px;
+                    content: "";
+                    display: block;
+                    float: left;
+                    background-image: url("../img/login.png");
+                    background-size: cover;
+                    width: 16px;
+                    height: 16px;
+                }
+                li:hover::after {
+                    position: absolute;
+                    margin-top: 27px;
+                    display: block;
+                    content: "";
+                    height: 1px;
+                    width: 100px;
+                    background-color: @brown;
+                }
+            }
+            .wrap {
+                align-items: center;
+                flex-direction: column;
+                display: flex;
+                margin: 0 auto;
+                width: 960px;
+    
+    
+                .logo {
+                    margin-top: 55px;
+                    width: 370px;
+                    height: 153px;
+                }
+    
+            }
+            .decorate_polosa {
+                margin: 0 auto;
+                width: 1200px;
+                height: 68px;
             }
         }
-        .exet {
-            margin-left: 140px;
+        .inputs {
+            background-color: @white;
+            margin: 0 auto;
+            width: 1200px;
+            .wra {
+                margin: 0 auto;
+                width: 960px;
+                color: @black;
+                font-family: "PT Sans - Narrow";
+                h2 {
+                    font-size: 40px;
+                    font-weight: 400px;
+                }
+                .small {
+    
+                    color: @black;
+                    font-size: 24px;
+                    padding: 33px 7px;
+                }
+                .middle {
+                    padding: 22px 281px 22px 24px;
+                }
+                .big {
+                    width: 960px;
+                    text-align: justify;
+                    padding: 0 0 190px; //                padding: 26px 770px 163px 24px;
+                }
+    
+                .smal_btn {
+                    text-decoration: none;
+                    color: @black;
+                    padding: 18px 36px;
+                    border: 1px solid @border;
+                }
+    
+    
+    
+            }
         }
-        .exet::before {
-            margin-right: 19px;
-            content: "";
+    .content_model {
+
+        background-color: @white;
+        width: 1200px;
+        .wrap_twosec {
+            background-color: @white;
+            width: 960px;
+
+        }
+        .checkbox {
+            display: none;
+        }
+        .checkbox-custom {
+            position: relaive;
             display: block;
-            float: left;
-            background-image: url("/img/login.png");
-            background-size: cover;
-            width: 16px;
-            height: 16px;
+            width: 54px;
+            height: 54px;
+            border: 1px solid @border;
+            border-radius: 50px;
         }
-        li:hover::after {
+        .checkbox-custom {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .checkbox:checked + .checkbox-custom::before {
+            content: "";
             position: absolute;
-            margin-top: 27px;
+            display: block;
+            margin-top: 17px;
+            margin-left: 19px;
+            height: 17px;
+            width: 17px;
+            border: 1px solid @border;
+            border-radius: 10px;
+        }
+         p {
+                            margin-top: 35px;
+                        }
+         img {
+                            margin-top: 35px;
+                         }
+
+
+        h3 {
+            display: -webkit-flex;
+            text-transform: uppercase;
+            color: @black;
+            font-size: 30px;
+            font-weight: 400;
+            margin: auto
+        }
+        h3:after {
+            margin-top: -15px;
+            margin-left: -290px;
+            position: absolute;
             display: block;
             content: "";
             height: 1px;
-            width: 42px;
-            background-color: red;
+            width: 275px;
+            background-color: @border;
         }
+        h3:Before {
+            margin-top: 15px;
+            margin-left: 440px;        
+            position: absolute;
+            display: block;
+            content: "";
+            height: 1px;
+            width: 245px;
+            background-color: @border;
+     }
     }
-
-    .inputs {
-        border: 1px solid;
-        color: @black;
-        font-family: "PT Sans - Narrow";
-        .small {
-
-            font-size: 24px;
-            padding: 33px 17px;
-        }
-        .middle {
-            padding: 22px 281px 22px 24px;
-        }
-        .big {
-            padding: 26px 670px 163px 24px;
-
-        }
-    }
-
-    .cont_beard {
-        margin: 0 auto;
-
-        width: 90px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        .curcle {
-            justify-content: center;
-            align-items: center;
-            display: flex;
-            border-radius: 51px;
-            width: 52px;
-            height: 52px;
-            border: 1px solid @grey_late;
-            input {
-                border-color: red;
-                width: 20px;
-                height: 20px;
-            }
-        }
-        p {
-            margin-top: 35px;
-        }
-        img {
-            margin-top: 35px;
-        }
-    }
-
-    .cont_chekbox {
-        display: flex;
-        align-items: center;
-        input[type=checkbox] {
-            width: 22px;
-            height: 16px;
-            ;
-        }
-        .label {
-            font-family: "PT Sans - Narrow";
-            font-size: 20px;
-            margin-left: 35px;
-        }
-    }
-
-    .smal_btn {
-        text-decoration: none;
-        color: @black;
-        padding: 18px 36px;
-        border: 1px solid @border;
-    }
-
-    .big_btn {
-        text-decoration: none;
-        color: @white;
-        background-color: @brown;
-        padding: 26px 389px;
-        border: 1px solid @border;
-    }
-
-    .big_btn {}
+}
