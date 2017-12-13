@@ -2,8 +2,201 @@
     @black: #000000;
     @white: #f8f5f2;
     @grey_black: #292929;
-    @border: #3f3f3f;
+    @grey_backgruund: #3f3f3f;
     @grey_late: #ebe4de;
     @brown: #826550;
-    @border: #e5ddd5; //
-   
+    @border: #e5ddd5;
+    @after: #826550;
+//цвета для блоков
+   @grey1:#404040;
+   @grey2:#4e4e4e;
+   @grey3:#353535;
+    
+    
+    header,
+    .points,
+    .news,
+    .reviews,
+    footer {
+        width: 1200px;
+
+
+    }
+
+    .wrap {
+        width: 960px;
+
+
+    }
+
+
+    header {
+
+        background-image: url(/img/back.png);
+        .top_menu {
+            position: relative;
+            width: 100%;
+            height: 72px;
+            display: flex;
+            background-color: @black;
+            justify-content: flex-start;
+            align-items: center;
+            li {
+                margin-left: 64px;
+                list-style-type: none;
+                a {
+                    position: relative;
+                    color: @white;
+                    font-family: "PT Sans - Narrow Bold";
+                    font-size: 18px;
+                    text-decoration: none;
+                }
+            }
+            li:first-child {
+                margin-left: 0;
+            }
+            li:hover::after {
+                margin-top: 23px;
+                position: absolute;
+                display: block;
+                content: "";
+                height: 1px;
+                width: 90px;
+                background-color: #826550;
+            }
+            .exet {
+                margin-left: 200px;
+            }
+            .exet::before {
+                margin-left: -40px;
+                position: absolute;
+                margin-right: 10px;
+                display: inline-block;
+                display: block;
+                content: '';
+                width: 16px;
+                height: 16px;
+                background-image: url(/img/login.png);
+            }
+        }
+        .top_menu::after {
+            margin-left: -120px;
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 70px;
+            background-color: @black;
+        }
+        .top_menu::before {
+            margin-left: 960px;
+            content: "";
+            position: absolute;
+            display: block;
+            width: 120px;
+            height: 70px;
+            background-color: @black;
+        }
+        .footer_cont_img {
+            display: flex;
+            .img_background {
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-direction: column;
+                float: left;
+                display: flex;
+                height: 159px;
+                width: 320px;
+                color: @white;
+            }
+            strong {
+                position: relative;
+                margin-left: 40px;
+                font-family: "PT Sans - Narrow Bold";
+                font-size: 72px;
+                .star{
+                position: absolute;
+                    margin-top: -60px;
+                    margin-left: 200px;
+            }
+            }
+            p {
+               
+                margin-left: 40px;
+                font-family: "PT Sans - Narrow";
+                font-size: 20px;
+            }
+            
+            .left {
+                color: @black;
+                background-color: @white;
+                strong{
+                    font-weight: 800;
+                    margin-left: 10px;
+                    text-indent: 0;
+                    font-size: 42px;
+                }
+            }
+            .center {
+                background-color:@grey1;
+            }
+            .right {
+                background-color:@grey2;
+            }
+
+        }
+    }
+.points{
+    background-color:@grey3;
+    justify-content: space-between;
+    flex-direction: column;
+    display: flex;
+            .points_cont_img {
+            display: flex;
+            .img_background {
+                justify-content: space-around;
+                align-items: flex-start;
+                flex-direction: column;
+                float: left;
+                display: flex;
+                height: 159px;
+                width: 320px;
+                color: @white;
+            }
+            strong {
+                position: relative;
+                margin-left: 40px;
+                font-family: "PT Sans - Narrow Bold";
+                font-size: 72px;
+                .star{
+                position: absolute;
+                    margin-top: -60px;
+                    margin-left: 260px;
+            }
+            }
+            p {
+               
+                margin-left: 40px;
+                font-family: "PT Sans - Narrow";
+                font-size: 20px;
+            }
+            
+            .left {
+                color: @black;
+                background-color: @white;
+                strong{
+                    font-weight: 800;
+                    margin-left: 10px;
+                    text-indent: 0;
+                    font-size: 42px;
+                }
+            }
+            .center {
+               background-color: @grey1;
+            }
+            .right {
+               background-color: @grey3;
+            }
+
+        }
+}
