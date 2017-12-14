@@ -6,13 +6,12 @@
     @grey_late: #ebe4de;
     @brown: #826550;
     @border: #e5ddd5;
-    @after: #826550;
-//цвета для блоков
-   @grey1:#404040;
-   @grey2:#4e4e4e;
-   @grey3:#353535;
-    
-    
+    @after: #826550; //цвета для блоков
+    @grey1: #404040;
+    @grey2: #4e4e4e;
+    @grey3: #353535;
+
+
     header,
     .points,
     .news,
@@ -114,23 +113,22 @@
                 margin-left: 40px;
                 font-family: "PT Sans - Narrow Bold";
                 font-size: 72px;
-                .star{
-                position: absolute;
+                .star {
+                    position: absolute;
                     margin-top: -60px;
                     margin-left: 200px;
-            }
+                }
             }
             p {
-               
+
                 margin-left: 40px;
                 font-family: "PT Sans - Narrow";
                 font-size: 20px;
             }
-            
             .left {
                 color: @black;
                 background-color: @white;
-                strong{
+                strong {
                     font-weight: 800;
                     margin-left: 10px;
                     text-indent: 0;
@@ -138,20 +136,21 @@
                 }
             }
             .center {
-                background-color:@grey1;
+                background-color: @grey1;
             }
             .right {
-                background-color:@grey2;
+                background-color: @grey2;
             }
 
         }
     }
-.points{
-    background-color:@grey3;
-    justify-content: space-between;
-    flex-direction: column;
-    display: flex;
-            .points_cont_img {
+
+    .points {
+        background-color: @grey3;
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex; //    Верхние пункты поинтса
+        .points_cont_img {
             display: flex;
             .img_background {
                 justify-content: space-around;
@@ -163,28 +162,30 @@
                 width: 320px;
                 color: @white;
             }
+
+
             strong {
                 position: relative;
                 margin-left: 40px;
                 font-family: "PT Sans - Narrow Bold";
                 font-size: 72px;
-                .star{
-                position: absolute;
+                .star {
+                    position: absolute;
                     margin-top: -60px;
                     margin-left: 260px;
-            }
+                }
             }
             p {
-               
+
                 margin-left: 40px;
                 font-family: "PT Sans - Narrow";
                 font-size: 20px;
             }
-            
+
             .left {
                 color: @black;
                 background-color: @white;
-                strong{
+                strong {
                     font-weight: 800;
                     margin-left: 10px;
                     text-indent: 0;
@@ -192,11 +193,45 @@
                 }
             }
             .center {
-               background-color: @grey1;
+                background-color: @grey1;
             }
             .right {
-               background-color: @grey3;
+                background-color: @grey3;
+            }
+            .grey_text {
+                color: #d6d6d6;
             }
 
+        } //    Нижний блок пунктов
+        .block_points {
+           justify-content: space-around;
+            display: flex;
+            .contauner_points {
+                margin-top: 80px;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: column;
+                display: flex;
+                color:@white;
+                img {
+                    margin-top: 34px;
+                    width: 94px;
+                    height: 94px;
+                }
+                .big_text {
+                    margin-top: 34px;
+                    font-size: 30px;
+
+                }
+                .smal_text {
+                    text-align: center;
+                    margin-top: 22px;
+                    font-size: 20px;
+                }
+            }
+            .wing{
+                width: 100%;
+                margin-top: 39px;
+            }
         }
-}
+    }
