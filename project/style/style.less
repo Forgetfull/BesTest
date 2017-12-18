@@ -10,11 +10,10 @@
     @grey1: #404040;
     @grey2: #4e4e4e;
     @grey3: #353535;
-    
-body{
-    background: linear-gradient(to top, grey, white);
-//    background-color: black;
-}
+
+    body {
+        background: linear-gradient(to top, grey, white); //    background-color: black;
+    }
 
     .flex_col {
         flex-direction: column;
@@ -33,8 +32,8 @@ body{
     .reviews,
     footer {
         width: 1200px;
-     
- 
+
+
     }
 
     .wrap {
@@ -111,54 +110,29 @@ body{
             height: 70px;
             background-color: @black;
         }
-        .footer_cont_img {
-            display: flex;
-            .img_background {
-                justify-content: space-around;
-                align-items: flex-start;
-                flex-direction: column;
-                float: left;
-                display: flex;
-                height: 159px;
+
+
+        .footer-blockPoints {
+            margin-top: 279px;
+            width: 960px;
+            height: 318px;
+            background-color: red;
+            .flex_row;
+            .blockPoints-contPoints {
                 width: 320px;
-                color: @white;
-            }
-            strong {
-                position: relative;
-                margin-left: 40px;
-                font-family: "PT Sans - Narrow Bold";
-                font-size: 72px;
-                .star {
-                    position: absolute;
-                    margin-top: -60px;
-                    margin-left: 200px;
+                height: 318px;
+                .flex_col;
+                .poins {
+
+                    width: 310px;
+                    height: 149px;
+                    background-color: white;
                 }
             }
-            p {
-
-                margin-left: 40px;
-                font-family: "PT Sans - Narrow";
-                font-size: 20px;
-            }
-            .left {
-                color: @black;
-                background-color: @white;
-                strong {
-                    font-weight: 800;
-                    margin-left: 10px;
-                    text-indent: 0;
-                    font-size: 42px;
-                }
-            }
-            .center {
-                background-color: @grey1;
-            }
-            .right {
-                background-color: @grey2;
-            }
-
         }
     }
+
+
 
     .points {
         background-color: @grey3;
@@ -267,7 +241,7 @@ body{
     }
 
     .news {
-        background-color:@white;
+        background-color: @white;
         .wrap {
             .header {
                 margin-top: 61px;
@@ -438,7 +412,7 @@ body{
             .footer_cont {
                 margin: 53px 0;
                 justify-content: center;
-                 
+
                 flex-direction: column;
                 display: flex;
                 .st {
@@ -451,25 +425,26 @@ body{
                 font-size: 18px;
                 margin-top: 15px;
             }
-            strong{
+            strong {
                 font-weight: 600;
             }
-            strong:first-child{
+            strong:first-child {
                 margin-top: 15px;
             }
-            .textCenter{text-align: center;
-                
+            .textCenter {
+                text-align: center;
+
             }
             .cont_img {
                 justify-content: space-between;
                 display: flex;
                 margin-top: 15px;
-                img{
+                img {
                     margin-left: 6px;
                     padding: 15px;
                     border: 1px solid @border;
                 }
-                img:first-child{
+                img:first-child {
                     margin-left: 0;
                 }
             }
