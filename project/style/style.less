@@ -7,12 +7,16 @@
     @brown: #826550;
     @border: #e5ddd5;
     @after: #826550; //цвета для блоков
-    @grey1: #404040;
+    @pale-grey: #404040;
     @grey2: #4e4e4e;
-    @grey3: #353535;
-
-    body {
-        background: linear-gradient(to top, grey, white); //    background-color: black;
+    @grey3: #353535; //примеси
+    .flex-col {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: space-between;
     }
 
     .flex_col {
@@ -23,29 +27,38 @@
     .flex_row {
         flex-direction: row;
         display: flex;
+        justify-content: space-between;
     }
 
+
+    body {
+        background: linear-gradient(to top, grey, white); //    background-color: black;
+    }
 
     header,
     .points,
     .news,
     .reviews,
     footer {
-        width: 1200px;
+
+        max-width: 1200px;
+        min-width: 320px;
 
 
     }
 
     .wrap {
-        width: 960px;
+        width: 80%;
 
 
     }
 
 
+    //основные блоки
     header {
-
-        background-image: url(/img/back.png);
+        background: @grey2 url(/img/back.png) no-repeat;
+        background-size: 1200px 720px;
+        //        верхняя менюшка
         .top_menu {
             position: relative;
             width: 100%;
@@ -110,134 +123,98 @@
             height: 70px;
             background-color: @black;
         }
-
-
-        .footer-blockPoints {
+        //        пункты в хедере
+        .header-blockPoints {
             margin-top: 279px;
             width: 960px;
             height: 318px;
-            background-color: red;
             .flex_row;
             .blockPoints-contPoints {
-                width: 320px;
-                height: 318px;
+                width: 325px;
+                height: 325px;
                 .flex_col;
+                //                оформление пуктов
                 .poins {
-
-                    width: 310px;
+                    .flex_col;
+                    align-items: center;
+                    justify-content: center;
+                    width: 320px;
                     height: 149px;
                     background-color: white;
+                    strong {
+                        font-family: "PT Sans - Narrow Bold";
+                        font-size: 72px;
+                        .star {
+                            position: absolute;
+                            margin-left: 180px;
+                            margin-top: -70px;
+                        }
+                        p {
+                            color: #f7f4f1;
+                            font-family: "PT Sans - Narrow";
+                            font-size: 20px;
+                        }
+
+                    }
+
                 }
+                //                цвета для пуктов
+                .points-white {
+                    color: @black;
+                    strong {
+                        font-family: "PT Sans - Narrow Bold";
+
+                        font-size: 40px;
+                    }
+                    p {
+                        font-family: "PT Sans - Narrow";
+                        color: @black;
+                        font-size: 20px;
+                    }
+                }
+                .points-pale-grey {
+                    background-color: @pale-grey;
+                }
+                .points-grey {
+                    background-color: @grey3;
+                }
+                .points-white-gray {
+                    background-color: @grey2;
+                }
+
             }
         }
-    }
-
-
-
-    .points {
-        background-color: @grey3;
-        justify-content: space-between;
-        flex-direction: column;
-        display: flex; //    Верхние пункты поинтса
-        .points_cont_img {
-            display: flex;
-            .img_background {
-                justify-content: space-around;
-                align-items: flex-start;
-                flex-direction: column;
-                float: left;
-                display: flex;
-                height: 159px;
-                width: 320px;
-                color: @white;
-            }
-
-
-            strong {
-                position: relative;
-                margin-left: 40px;
-                font-family: "PT Sans - Narrow Bold";
-                font-size: 72px;
-                .star {
-                    position: absolute;
-                    margin-top: -60px;
-                    margin-left: 260px;
-                }
-            }
-            p {
-
-                margin-left: 40px;
-                font-family: "PT Sans - Narrow";
-                font-size: 20px;
-            }
-
-            .left {
-                color: @black;
-                background-color: @white;
-                strong {
-                    font-weight: 800;
-                    margin-left: 10px;
-                    text-indent: 0;
-                    font-size: 42px;
-                }
-            }
-            .center {
-                background-color: @grey1;
-            }
-            .right {
-                background-color: @grey3;
-            }
-            .grey_text {
-                color: #d6d6d6;
-            }
-
-        } //    Нижний блок пунктов
-        .block_points {
-            justify-content: space-around;
-            display: flex;
-            .contauner_points {
-                margin-top: 80px;
-                justify-content: space-between;
+        //        пункты в башне
+        .bash {
+            margin-top: 80px;
+            .flex_row;
+            justify-content: center;
+            //            конт башни
+            .elemBash {
+                .flex_col;
                 align-items: center;
-                flex-direction: column;
-                display: flex;
                 color: @white;
                 img {
-                    margin-top: 34px;
-                    width: 94px;
+
+                    width: 95px;
                     height: 94px;
                 }
                 .big_text {
+                    text-align: center;
                     margin-top: 34px;
                     font-size: 30px;
-
                 }
                 .smal_text {
-                    text-align: center;
-                    margin-top: 22px;
                     font-size: 20px;
+                    margin-top: 22px;
+                    text-align: center;
                 }
             }
-            .wing {
-                width: 100%;
-                margin-top: 39px;
+            .bord {
+                border-left: 1px solid @border;
+                border-right: 1px solid @border;
             }
         }
-    }
-
-    .flex_row {
-        justify-content: space-between;
-        align-items: center;
-        display: flex;
-    }
-
-    .flex-col {
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flex;
-        display: -o-flex;
-        display: flex;
-        justify-content: space-between;
     }
 
     .news {
@@ -247,6 +224,7 @@
                 margin-top: 61px;
                 width: 960px;
                 .flex_row;
+
                 h2 {
                     color: @black;
                     font-size: 40px;
@@ -420,32 +398,33 @@
                     padding: 15px;
                     border: 1px solid @border;
                 }
-            }
-            p {
-                font-size: 18px;
-                margin-top: 15px;
-            }
-            strong {
-                font-weight: 600;
-            }
-            strong:first-child {
-                margin-top: 15px;
-            }
-            .textCenter {
-                text-align: center;
 
-            }
-            .cont_img {
-                justify-content: space-between;
-                display: flex;
-                margin-top: 15px;
-                img {
-                    margin-left: 6px;
-                    padding: 15px;
-                    border: 1px solid @border;
+                p {
+                    font-size: 18px;
+                    margin-top: 15px;
                 }
-                img:first-child {
-                    margin-left: 0;
+                strong {
+                    font-weight: 600;
+                }
+                strong:first-child {
+                    margin-top: 15px;
+                }
+                .textCenter {
+                    text-align: center;
+
+                }
+                .cont_img {
+                    justify-content: space-between;
+                    display: flex;
+                    margin-top: 15px;
+                    img {
+                        margin-left: 6px;
+                        padding: 15px;
+                        border: 1px solid @border;
+                    }
+                    img:first-child {
+                        margin-left: 0;
+                    }
                 }
             }
         }
